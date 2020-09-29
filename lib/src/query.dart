@@ -96,6 +96,24 @@ class AlgoliaQuery {
   }
 
   ///
+  ///  **OptionalWords**
+  ///
+  AlgoliaQuery setOptionalWords(String value) {
+    assert(value != null);
+    assert(!_parameters.containsKey('optionalWords'));
+    return _copyWithParameters(<String, dynamic>{'optionalWords': value});
+  }
+
+  ///
+  ///  **RemoveWordsIfNoResults**
+  ///
+  AlgoliaQuery setRemoveWordsIfNoResults(String value) {
+    assert(value != null);
+    assert(!_parameters.containsKey('removeWordsIfNoResults'));
+    return _copyWithParameters(<String, dynamic>{'removeWordsIfNoResults': value});
+  }
+
+  ///
   /// **AttributesToRetrieve**
   ///
   /// Gives control over which attributes to retrieve and which not to retrieve.
